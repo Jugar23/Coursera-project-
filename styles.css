@@ -1,0 +1,78 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif; /* Optional: Set a custom font-family */
+}
+
+h1 {
+    font-size: 1.75em; /* 75% larger than dummy text */
+    text-align: center;
+    margin: 20px 0;
+    padding-top: 15px;
+}
+
+.section {
+    box-sizing: border-box;
+    border: 1px solid black;
+    margin: 10px;
+    overflow: hidden;
+    position: relative; /* Ensure relative positioning for absolute child elements */
+    padding: 30px;
+
+}
+
+.section-title {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: #ffa07a; /* Unique color for section title region */
+    padding: 5px 10px;
+    font-size: 125%; /* 25% larger than dummy text */
+    border: 1px solid black;
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .section {
+        width: 48%; /* Two equal sections in the first row */
+        float: left;
+    }
+
+    .section:nth-child(3) {
+        width: 100%; /* Full width for the third section in the second row */
+        clear: both;
+    }
+}
+
+@media (max-width: 767px) {
+    .section {
+        width: 100%; /* Each section takes up the entire row in mobile view */
+        float: none;
+    }
+}
+
+        @media (max-width: 767px) {
+            .section {
+                width: 100%; /* Each section takes up the entire row in mobile view */
+                float: none;
+            }
+        }
+
+        /* Desktop view (992px and above) is the default layout */
+        @media (min-width: 992px) {
+            .section {
+                width: 31%; /* Three equal sections in one row */
+                float: left;
+            }
+        }
+
+        /* Set background colors for sections */
+        .section:nth-child(1) {
+            background-color: #87ceeb; /* Light Blue */
+        }
+
+        .section:nth-child(2) {
+            background-color: #98fb98; /* Pale Green */
+        }
+
+        .section:nth-child(3) {
+            background-color: #ffe4e1; /* Misty Rose */
+        }
